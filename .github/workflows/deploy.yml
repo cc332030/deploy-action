@@ -1,0 +1,20 @@
+
+name: deploy
+
+on:
+  workflow_call:
+    secrets:
+      SSH_PRIVATE_KEY:
+        required: true
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cc332030/deploy-action@main
+        timeout-minutes: 2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+          command: ${{ inputs.command }}

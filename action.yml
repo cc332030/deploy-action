@@ -1,0 +1,12 @@
+
+name: 'Deploy Action'
+
+description: 'Action for Deploy.'
+
+branding:
+  icon: 'loader'
+  color: 'orange'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
