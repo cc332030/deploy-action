@@ -19,3 +19,5 @@ if [ -n "$COMMAND" ]
 then
   sh -c "${COMMAND}" || true
 fi
+
+curl_sh /linux/raw/master/script/init-ssh/clean-ssh.sh
