@@ -20,4 +20,8 @@ then
   sh -c "${COMMAND}" || true
 fi
 
-curl_sh /linux/raw/master/script/init-ssh/clean-ssh.sh
+
+
+if [ "$SSH_PRIVATE_KEY" ]; then
+  curl_sh /linux/raw/master/script/init-ssh/clean-ssh.sh
+fi
